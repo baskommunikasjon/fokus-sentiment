@@ -2,6 +2,7 @@
 
 import spacy 
 import numpy as np
+import pandas as pd
 
 # Load text
 nlp = spacy.load("nb_core_news_sm")
