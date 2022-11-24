@@ -25,7 +25,9 @@ for token in text_results:
     #print(token.text, token.pos_, token.dep_, token.tag_, token.morph)
     if token.text in pos['Word'].values:
         print(token.text, token.pos_, token.dep_, token.tag_, token.morph)
+        print('/n Positive')
     elif token.text in neg['Word'].values:
         print(token.text, token.pos_, token.dep_, token.tag_, token.morph)
+        print('/n Negative')
     else:
         continue     
