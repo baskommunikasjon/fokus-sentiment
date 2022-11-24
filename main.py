@@ -4,7 +4,7 @@ import spacy
 import numpy as np
 import pandas as pd
 from data_processing.get_labels import get_positive_and_negative_words
-
+from data_processing.get_message import get_sentiment
 # Load text
 nlp = spacy.load("nb_core_news_sm")
 '''
@@ -16,7 +16,7 @@ text_results = nlp('Frem til tirsdag kveld var Bruno Fernandes'
 ' Manchester United, men da kom beskjeden om'
 ' at Ronaldo var ferdig for klubblaget.')
 
-text_results2 = nlp('Barentssekretariatet har vært til stede'
+text_results1 = nlp('Barentssekretariatet har vært til stede'
 ' i de russiske byene Arkhangelsk, Murmansk og Narjan-Mar'
 ', men driften ved kontorene vil bli avviklet med virkning '
 'fra 1. februar neste år, skriver de på sine nettsider.'
@@ -33,3 +33,7 @@ text_results2 = nlp('Barentssekretariatet har vært til stede'
 
 
 pos, neg = get_positive_and_negative_words()
+get_sentiment(text_results, pos, neg)
+print('First text is done\n')
+print('\n')
+get_sentiment(text_results1, pos, neg)
