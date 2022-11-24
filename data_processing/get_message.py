@@ -20,3 +20,5 @@ def get_sentiment(text_results, pos, neg):
         print('The sentence contains a Positive feeling')
     elif len(positive_feeling) < len(negative_feeling):
         print('The sentence contains a Negative feeling')
+    else:
+        'Job done'
