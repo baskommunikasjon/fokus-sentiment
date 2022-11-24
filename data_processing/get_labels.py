@@ -7,10 +7,11 @@ import os
 import json
 from ast import literal_eval
 import openpyxl
-# Positive
+
 
 path = 'norsentlex/Fullform'
 for file in os.listdir(path):
+    # Positive
     if 'Positive.json' in file:
         pos = pd.read_json(str(path+'/'+file), orient='index')
         pos_explode_fixed = pos.apply(pd.Series.explode).reset_index()
@@ -18,6 +19,7 @@ for file in os.listdir(path):
         pos_explode_fixed.rename(columns={'index':'Word'}, inplace=True)
         print(pos_explode_fixed)  
         pos_explode_fixed.to_excel('data/Positive words.xlsx')
+    # Negative
     elif 'Negative.json' in file:
         neg = pd.read_json(str(path+'/'+file), orient='index')
         neg_explode_fixed = neg.apply(pd.Series.explode).reset_index()
