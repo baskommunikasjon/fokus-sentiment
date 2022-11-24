@@ -15,21 +15,21 @@ text_results = nlp('Frem til tirsdag kveld var Bruno Fernandes'
 ' og Cristiano Ronaldo både lagkamerater for Portugal og'
 ' Manchester United, men da kom beskjeden om'
 ' at Ronaldo var ferdig for klubblaget.')
-print(text_results)
-for token in text_results:
-    print(token.text, token.pos_, token.dep_, token.tag_, token.morph)
+
+text_results2 = nlp('Barentssekretariatet har vært til stede'
+' i de russiske byene Arkhangelsk, Murmansk og Narjan-Mar'
+', men driften ved kontorene vil bli avviklet med virkning '
+'fra 1. februar neste år, skriver de på sine nettsider.'
+'Det betyr at alle ansatte i Russland blir sagt opp.'
+'Sekretariatet tilrettelegger de norsk-russiske'
+' samarbeidsprosjektene i norsk og russisk del av Barentsregionen.'
+'Det er eid av Nordland og Troms og Finnmark fylkeskommuner,'
+' og fordeler midler til mellom 200 og 300 prosjekter hvert år.'
+'– Vi har en gjeng med svært dyktige kolleger på våre kontorer i Russland.'
+' Det er trist at vi har havnet i den situasjonen vi er i nå,'
+' sier daglig leder Lars Georg Fordal i Barentssekretariatet.'
+'Avgjørelsen kommer som en konsekvens av de utfordringene'
+' Russlands krig mot Ukraina har skapt for Barentssamarbeidet.')
+
 
 pos, neg = get_positive_and_negative_words()
-
-for token in text_results:
-    #print(token.text, token.pos_, token.dep_, token.tag_, token.morph)
-    if token.text in pos['Word'].values:
-        print(f'{token.text} is positive: and contains a {token.pos_, token.dep_} tagged as {token.tag_}, and \n'
-        f'the morphology is {token.morph}')
-        print('The sentence contains a Positive feeling')
-    elif token.text in neg['Word'].values:
-        print(f'{token.text} is negative: and contains a {token.pos_, token.dep_} tagged as {token.tag_}, and \n'
-        f'the morphology is {token.morph}')
-        print('The sentence contains a Negative feeling')
-    else:
-        continue     
