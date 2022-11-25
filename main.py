@@ -47,6 +47,8 @@ positive_results1, negative_results1 = get_sentiment(text_results1, pos, neg)
 # Save excel files
 
 save_excel(positive_results, negative_results,
+           'Result 1',
            'Positive results', 'Negative results')
 save_excel(positive_results1, negative_results1,
+           'Result 2',
            'Positive results', 'Negative results')
