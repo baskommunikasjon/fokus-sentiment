@@ -5,8 +5,8 @@ import pandas as pd
 import xlsxwriter
 
 # Functions
-def save_excel(df1, df2, sheetname_1, sheetname_2):
-    writer = pd.ExcelWriter('data/.xlsx', 
+def save_excel(df1, df2,filename,sheetname_1, sheetname_2):
+    writer = pd.ExcelWriter(f'data/{filename}.xlsx', 
                             engine ='xlsxwriter')
     try:
         df1.to_excel(writer, sheet_name=sheetname_1)
