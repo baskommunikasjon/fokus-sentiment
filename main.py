@@ -14,7 +14,7 @@ This is an nlp that separates the different parts of a sentence
 text_results = nlp('Frem til tirsdag kveld var Bruno Fernandes'
 ' og Cristiano Ronaldo både lagkamerater for Portugal og'
 ' Manchester United, men da kom beskjeden om'
-' at Ronaldo var ferdig for klubblaget.')
+' at Ronaldo var ferdig for klubblaget.') #nyhet1
 
 text_results1 = nlp('Barentssekretariatet har vært til stede'
 ' i de russiske byene Arkhangelsk, Murmansk og Narjan-Mar'
@@ -30,7 +30,7 @@ text_results1 = nlp('Barentssekretariatet har vært til stede'
 ' sier daglig leder Lars Georg Fordal i Barentssekretariatet.'
 'Avgjørelsen kommer som en konsekvens av de utfordringene'
 ' Russlands krig mot Ukraina har skapt for Barentssamarbeidet.')
-
+#nyhet2
 
 pos, neg = get_positive_and_negative_words()
 get_sentiment(text_results, pos, neg)
