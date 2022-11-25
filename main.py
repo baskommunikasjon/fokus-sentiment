@@ -33,7 +33,8 @@ text_results1 = nlp('Barentssekretariatet har vært til stede'
 #nyhet2
 
 pos, neg = get_positive_and_negative_words()
-get_sentiment(text_results, pos, neg)
+positive_results, negative_results = get_sentiment(text_results, pos, neg)
 print('First text is done\n')
 print('\n')
-get_sentiment(text_results1, pos, neg)
+positive_results1, negative_results1 = get_sentiment(text_results1, pos, neg)
+
