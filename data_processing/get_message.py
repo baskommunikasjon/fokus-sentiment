@@ -46,8 +46,8 @@ def get_sentiment(text_results, pos, neg):
         positive_feelings_full = pd.concat(positive_feeling)
         negative_feelings_full = pd.concat(negative_feeling)
     except Exception:
-        positive_feelings_full = []
-        negative_feelings_full = []
+        positive_feelings_full = negative_feeling
+        negative_feelings_full = positive_feeling
     print(positive_feelings_full)
     print(negative_feelings_full)
     return positive_feelings_full, negative_feelings_full
